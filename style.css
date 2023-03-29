@@ -1,18 +1,41 @@
+:root {
+  --mycolor1: #6DB1FF;
+  --mycolor2: #F16165;
+  --mycolor3: #FFBA05;
+  --mycolor4: #b0d05d;
+  --mycolor5: #653298;
+  --mycolor6: #00C86F;
+}
+
 * {
   margin: 0;
   padding: 0;
-  font-style: italic;
-  font-weight: 600;
-  
+  font-family: 'Merriweather', serif;
+  /* font-weight: 600; */
+
+}
+.navbar {
+  width: 100%;
+  background-color: var(--mycolor5);
+  width: 100%;
 }
 
-
+.navbar-brand {
+  width: 100%;
+  font-weight: 40px;
+  font-size: 40px;
+  align-items: left;
+}
 
 img {
   max-width: 100%;
-  display: block;
+  /* display: block; */
+  justify-content: end;
 }
-
+.navbar-nav {
+  font-size: 20px ;
+  font-style: normal;
+}
 .cart-btn {
   position: relative;
   display: flex;
@@ -28,12 +51,12 @@ img {
 
 .cart-quantity {
   color: white;
-  background-color: red;
+  background-color: var(--mycolor2);
   padding: .2em .3em;
   position: absolute;
   margin: .8em 7.5em 0 0;
   right: 0;
-  border: solid 2px red;
+  border: solid 2px var(--mycolor2);
   border-radius: 15px;
   font-weight: bolder;
 }
@@ -45,10 +68,10 @@ img {
 }
 
 .card {
-/*   width: 15rem; */
+  /*   width: 15rem; */
   margin: 1em;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
   text-align: center
 }
 
@@ -66,7 +89,7 @@ img {
   position: overlay;
   right: 0;
   top: 65%;
-  padding: .5em 1em; 
+  padding: .5em 1em;
   transform: translateX(300px);
   transition: .5s ease;
   outline: none;
@@ -92,13 +115,13 @@ img {
   z-index: 2;
   transform: translateX(-200%);
   transition: .5s ease-out;
-  
+
 }
 
 .cart-modal {
   height: 300vh;
   width: 50%;
-  background-color: rgb(50,50,50);
+  background-color: rgb(50, 50, 50);
   float: right;
   overflow: scroll;
   overflow-x: hidden;
@@ -118,13 +141,13 @@ img {
   font-size: 1.5rem;
   margin-bottom: 1em;
   display: none;
-  
+
 }
 
 .total {
   text-align: center;
   margin: 2em 0 2em 0;
-/*   display: none; */
+  /*   display: none; */
 }
 
 .cart-total {
@@ -140,7 +163,7 @@ img {
 .purchase-btn {
   font-size: 1rem;
   font-weight: bolder;
-  background-color: green;
+  background-color: var(--mycolor6);
   color: white;
   padding: 1em 2em;
   border-radius: 10px;
@@ -155,7 +178,7 @@ img {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
-  
+
 }
 
 .product-row {
@@ -196,21 +219,21 @@ img {
   transform: translateY(5px);
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
   .cart-modal {
     width: 100vw;
-  } 
-  
+  }
+
   .product-row {
     flex-direction: column;
     text-align: center;
     margin-bottom: 2em;
   }
-  
+
   .remove-btn {
     margin: 0
   }
-  
+
   .product-quantity {
     margin: .5em 0 .5em 0
   }
