@@ -3,7 +3,7 @@
   --mycolor2: #F16165;
   --mycolor3: #FFBA05;
   --mycolor4: #b0d05d;
-  --mycolor5: #653298;
+  --mycolor5: #9149d8;
   --mycolor6: #00C86F;
 }
 
@@ -237,4 +237,8 @@ img {
   .product-quantity {
     margin: .5em 0 .5em 0
   }
+}
+.product-drop-down a {
+  text-decoration: none !important;
+  
 }
