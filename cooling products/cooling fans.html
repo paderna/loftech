@@ -10,23 +10,21 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>2ndpage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!-- Style CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 
 </head>
-<nav class="navbar navbar-expand-md">
+<nav class="navbar navbar-expand-md   bg-success sticky-top">
     <div class="container navbar-dark">
-      <img src="KLT-modified.png" class="not-fluid" alt="Kaizen Loft Tech logo" height="100" width="100"> 
-      <a class="navbar-brand" href="#">Kaizen Loft Tech</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
+        <img src="modi kaizen.ico" class="not-fluid">
+        <a class="navbar-brand" href="#">Kaizen Loftech</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -96,44 +94,20 @@
         </div>
 
     </div>
-    <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <div class="d-flex">
-            <i id="cart" class="fas fa-shopping-cart"></i>
-            <span class="cart-quantity">0</span>
-          </div>
-        </li>
-      </ul>
+    </li>
+    </ul>
     </div>
     </div>
 </nav>
 
 <!-- Section-->
-<div class="cart-modal-overlay">
-    <div class="cart-modal">
-      <i id="close-btn" class="fas fa-times"></i>
-      <h1 class="cart-is-empty">Cart is empty</h1>
-
-      <div class="product-rows">
-      </div>
-      <div class="total">
-        <h1 class="cart-total">TOTAL</h1>
-        <span class="total-price">$0</span>
-        <button class="purchase-btn">PURCHASE</button>
-      </div>
-      </div>
-    </div>
-    
-  </div>
-<!----------------------------------------End of Navbar-------------------------------------------->  
-
 <section class="py-5">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <div class="col mb-5"  id="product-1">
+            <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top" src="20-231-941-03.jpg" alt="..." />
+                    <img class="card-img-top" src="35-103-208-02.jpg" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
@@ -149,36 +123,44 @@
                     </div>
                 </div>
             </div>
-            <div class="col mb-5"  id="product-2">
+            <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Sale badge-->
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem" id="product-price">Sale
+                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
                     </div>
                     <!-- Product image-->
-                    <img class="card-img-top" id="product-image" src="20-232-091-04.jpg" alt="..." />
+                    <img class="card-img-top" src="35-106-250-01.jpg" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
                             <!-- Product name-->
                             <h5 class="fw-bolder">Lorem, ipsum dolor.</h5>
+                            <!-- Product reviews-->
+                            <div class="d-flex justify-content-center small text-warning mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star-fill"></div>
+                            </div>
+                            <!-- Product price-->
                             <span class="text-muted text-decoration-line-through">$20.00</span>
                             $18.00
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center">  <button class="btn btn-outline-success mt-auto">Add to cart</button></div>
-
+                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Lorem.</a></div>
                     </div>
                 </div>
             </div>
-            <div class="col mb-5" id="product-3">
+            <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Sale badge-->
                     <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
                     </div>
                     <!-- Product image-->
-                    <img class="card-img-top" src="20-232-899-V01.jpg"..." />
+                    <img class="card-img-top" src="35-106-722-01.jpg" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
@@ -195,10 +177,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col mb-5" id="product-4">
+            <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top" src="20-232-920-V01.jpg" alt="..." />
+                    <img class="card-img-top" src="35-181-202-01.jpg" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
@@ -222,13 +204,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col mb-5" id="product-5">
+            <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Sale badge-->
                     <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
                     </div>
                     <!-- Product image-->
-                    <img class="card-img-top" src="20-236-417-02.jpg"alt= "..." />
+                    <img class="card-img-top" src="35-608-074_R01.jpg"alt= "..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
@@ -245,10 +227,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col mb-5" id="product-6">
+            <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top" src="20-236-708-V02.jpg" alt="..." />
+                    <img class="card-img-top" src="35-846-001-V11.jpg" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
@@ -264,13 +246,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col mb-5" id="product-7">
+            <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Sale badge-->
                     <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale
                     </div>
                     <!-- Product image-->
-                    <img class="card-img-top" src="20-236-933-05.jpg" alt="..." />
+                    <img class="card-img-top" src="35-856-233-01.jpg" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
@@ -295,10 +277,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col mb-5" id="product-8">
+            <div class="col mb-5">
                 <div class="card h-100">
                     <!-- Product image-->
-                    <img class="card-img-top" src="20-331-354-V08.jpg" alt="..." />
+                    <img class="card-img-top" src="A4RE_131780204863971219Yi8aRBWOVg.jpg" alt="..." />
                     <!-- Product details-->
                     <div class="card-body p-4">
                         <div class="text-center">
@@ -318,17 +300,13 @@
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Add-to-cart</a></div>
+                        <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Lorem.</a></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="js.js"></script>
-   
 </section>
-
-
 <!-- Footer-->
 <footer class="py-5 bg-dark">
     <div class="container">
