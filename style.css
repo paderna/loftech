@@ -487,3 +487,25 @@ min-height: 100vh;
   color:rgba(255, 255, 255, 0.704);
   text-shadow: 3px 3px rgba(26, 65, 40, 0.799);
 }
+
+/* Product Details Page */
+.product-details{
+  background: rgba(0,0,0,0.4)url("images/Productdetails.png");
+  background-position:center;
+  background-size: cover;
+  min-height: 40vh;
+  min-width: 100vh;  
+}
+.productsdetails{
+  display: flex;
+  text-align: center;
+  margin-top: 15%;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 50px;
+  color:rgba(255, 255, 255, 0.704);
+  text-shadow: 3px 3px rgba(26, 65, 40, 0.799);
+}
+.ourproducts{
+  margin-top: 20px;
+}
