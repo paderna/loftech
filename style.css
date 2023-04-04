@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-=======
-:root {
-  --mycolor1: #6DB1FF;
-  --mycolor2: #F16165;
-  --mycolor3: #FFBA05;
-  --mycolor4: #b0d05d;
-  --mycolor5: #9149d8;
-  --mycolor6: #00C86F;
-}
-
->>>>>>> 6eed4f7296a8cbc52ae30e567c2d725b31663bb3
 * {
     padding: 0;
     margin: 0;
@@ -390,7 +378,7 @@ min-height: 100vh;
  .main-parent{
   width: 100%;
   height: 100vh;
-  background-image: url(images/Background\ 1.jpg);
+  background-image: url("images/Background\ 1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -455,7 +443,7 @@ min-height: 100vh;
 
 /* hero section  */
 .home{
-  background: rgba(0,0,0,0.4)url("./Assets/sample\ pic.\ 1png.png");
+  background: rgba(0,0,0,0.4)url("");
   background-blend-mode: darken;
   background-position:center;
   background-size: cover;
@@ -474,28 +462,28 @@ min-height: 100vh;
   transition: all 0.4s;
 }
 
-<<<<<<< HEAD
 .h-btn:hover{
   opacity: 0.8;
   color: white;
   border: 4px solid blueviolet;
-=======
-  .product-row {
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 2em;
-  }
-
-  .remove-btn {
-    margin: 0
-  }
-
-  .product-quantity {
-    margin: .5em 0 .5em 0
-  }
 }
-.product-drop-down a {
-  text-decoration: none !important;
-  
->>>>>>> 6eed4f7296a8cbc52ae30e567c2d725b31663bb3
+
+/* Product Page */
+.products{
+  background: rgba(0,0,0,0.4)url("images/products.jpg");
+  background-position:center;
+  background-size: cover;
+  min-height: 60vh;
+  min-width: 100vh;
+
+}
+.productsslogan{
+  display: flex;
+  text-align: center;
+  margin-top: 15%;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 50px;
+  color:rgba(255, 255, 255, 0.704);
+  text-shadow: 3px 3px rgba(26, 65, 40, 0.799);
 }
