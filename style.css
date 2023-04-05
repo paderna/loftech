@@ -32,11 +32,11 @@
     }
   
   .nav-item a:hover {
-    color: red;
+    color: green;
   }
   .dropdown-item:hover{
 
-    color:red;
+    color:green;
   }
   
   .navbar-brand{
@@ -47,7 +47,7 @@
   }
   .navbar-brand span{
     font-weight: 600;
-    color: red;
+    color: green;
     font-size: 25px;
 
   }
