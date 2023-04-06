@@ -21,7 +21,8 @@
     <script src="https://kit.fontawesome.com/3733990f22.js" crossorigin="anonymous"></script>
     <!-- Js CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css%22%3E">
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 <style>
 
 
@@ -53,7 +54,7 @@
 
 }
 #root{
-    width: 60%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
@@ -226,7 +227,7 @@ button:hover{
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="easy build.html">Easy Build</a>
+                        <a class="nav-link" href="bundles.html">Bundles</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Help-Center.html">Rewards</a>
@@ -280,14 +281,14 @@ button:hover{
 <section>
     <div class="container">
         <div id="root"></div>
-        <div class="sidebar">
+        <!-- <div class="sidebar">
             <div class="head"><p>My cart</p></div>
             <div id="cartItem">Your cart is empty</div>
             <div class="foot">
                 <h3>Total</h3>
-                <h2 id="total">$ 0.00</h2>
+                <h2 id="total">P 0.00</h2>
             </div>
-        </div>
+        </div> -->
 
     </div>
 
@@ -408,29 +409,31 @@ button:hover{
     <!--  Modal Functions end-->
     <!--  Add to cart Starts Here-->
     <script>
+  
+
         const product = [
             {
                 id: 0,
                 image: 'images/laptop1.jpg',
-                title: 'Inspire 1',
+                title: 'Title',
                 price: 100,
             },
             {
                 id: 1,
                 image: 'images/laptop2.jpg',
-                title: 'Inspire 2',
+                title: 'Title',
                 price: 150,
             },
             {
                 id: 2,
                 image: 'images/laptop3.jpg',
-                title: 'Inspire 3',
+                title: 'Title',
                 price: 150,
             },
             {
                 id: 3,
                 image: 'images/laptop4.jpg',
-                title: 'sonic 1',
+                title: 'Title',
                 price: 150,
             }
         ];
@@ -447,7 +450,7 @@ button:hover{
                     </div>
                     <div class='bottom'>
                         <p>${title}</p>
-                        <h2>$ ${price}.00</h2>`+ 
+                        <h2>P ${price}.00</h2>`+ 
                         "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
                     `</div>
                 </div>`       
@@ -459,11 +462,23 @@ button:hover{
         console.log(cart)
         displaycart()
         function addtocart(a){
+
+            /* TOASTER NOTIF OF ADDING CART */
+            Toastify({
+                text: "Product Added to Cart",
+                className: "info",
+                position: "center",
+                style: {
+                  background: "green",
+                }
+              }).showToast();
+            /* ------------------------ */
             
             console.log(a)
             cart.push({...categories[a]});
             localStorage.setItem("cartItems",JSON.stringify(cart))
             displaycart();
+  
         }
         function delElement(a){
             cart.splice(a, 1);
@@ -479,21 +494,21 @@ button:hover{
             document.getElementById("count").innerHTML=cart.length;
             if(cart.length==0){
                 document.getElementById('cartItem').innerHTML = "Your cart is empty";
-                document.getElementById("total").innerHTML = "$ "+0+".00";
+                document.getElementById("total").innerHTML = "P "+0+".00";
             }
             else{
                 document.getElementById('cartItem').innerHTML = cart.map((items)=>
                 {
                     var {image, title, price} = items;
                     total=total+price;
-                    document.getElementById("total").innerHTML = "$ "+total+".00";
+                    document.getElementById("total").innerHTML = "P "+total+".00";
                     return(
                         `<div class='cart-item'>
                             <div class=row-img'>
                                 <img class='rowimg' src=${image}>
                             </div>
                                 <p style='font-size:12px;'>${title}</p>
-                                <h2 style='font-size: 15px;'>$ ${price}.00</h2>`+
+                                <h2 style='font-size: 15px;'>P ${price}.00</h2>`+
                                 "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
                     )
                 }).join('');
@@ -504,7 +519,7 @@ button:hover{
 
     <!--  Add to cart Ends Here-->
 
-    <script src="owlcarousel/owl.carousel.min.js"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
