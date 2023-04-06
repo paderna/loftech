@@ -226,7 +226,7 @@ button:hover{
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Easy Build</a>
+                        <a class="nav-link" href="easy build.html">Easy Build</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Help-Center.html">Rewards</a>
@@ -242,7 +242,7 @@ button:hover{
                 <form class="d-flex navinput">
                     <input class="px-2 search" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn1 me-2 px-3" type="submit">Search</button> &nbsp;&nbsp;&nbsp;
-                    <span><a href="Shopping Cart.html"><i class="bi bi-cart4"></i></a></span>
+                    <span><a href="cart.html"><i class="bi bi-cart4"></i></a></span>
                     <p id="count">0</p>
 
                     <li class="nav-item dropdown-center" style="margin-top: -22px;">
@@ -393,24 +393,6 @@ button:hover{
 
 
 
-
-        $('.owl-carousel').owlCarousel({
-            loop: true,
-            margin: 0,
-            nav: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 5
-                },
-
-            }
-        })
     </script>
     <!--  Modal Functions -->
     <script>
@@ -474,7 +456,6 @@ button:hover{
         .join('')
         console.log(categories)
         var cart = JSON.parse(localStorage.getItem("cartItems"))||[];
-        // var cart =[];
         console.log(cart)
         displaycart()
         function addtocart(a){
