@@ -1,6 +1,6 @@
 .upload-container {
-    width: 80%;
-    height: 250px;
+    width: 70%;
+    height: 220px;
     padding: 25px;
     margin: 0px auto;
     position: relative;
@@ -12,17 +12,37 @@
 
 .upLoadImg {
     border: dashed 2px var(#AE67DE);
-    height: 100px;
-    width: 150px;
-    position: absolute;
-    
+    height: 50px;
+    width: 50px;
+    position: relative;
+    margin-top: 150px;
 
 }
+
 .card {
     height: 100%;
     width: 70%;
     margin: 250px auto;
-   
+
     position: relative;
     margin-left: 300px !important;
+}
+
+.upload-img {
+
+    width: 350px;
+    height: 250px;
+    background-color: #cbcece;
+    padding: 25px;
+    background-color: white;
+    box-shadow: 0 0 5px 0 grey;
+    margin: 45px auto;
+    margin-left: 20px !important;
+    position: absolute;
+    left: 125px;
+    border: dashed var(--mycolor5);
+
+    display: inline-block;
+    border-radius: 10px;
+
 }
