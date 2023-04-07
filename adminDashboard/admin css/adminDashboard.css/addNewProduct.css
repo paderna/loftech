@@ -52,7 +52,7 @@
 }
 
 #product-name {
-    padding-left: 150px;
+    padding-left: 10px;
     margin-left: 220px;
 }
 
@@ -83,4 +83,67 @@
     padding: 5px;
     width: 100px;
 }
+.form-text {
+    margin-left: 220px;
+}
+.product-price--large {
+    height: 38px;
+    font-size: 14px;
+   
+}
+.price-input__input {
+    padding-left: 30px;
+    margin-left: 170px;
+    height: 38px;
+    font-size: 14px;
+    border-radius: 4px;
+    display: table-cell;
+    width: 40%;
+    padding: 0;
+    vertical-align: middle;
+    background-color: inherit;
+   
+    outline: none;
+    box-sizing: border-box;
 
+}
+.price-input__prefix {
+    padding-right: 8px;
+    position: relative;
+    display: table-cell;
+    width: 1px;
+    height: 100%;
+    line-height: 0;
+    color: var(--mycolor5);
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.price-input__input1 {
+    padding-left: 30px;
+    margin-left: 170px;
+    height: 38px;
+    font-size: 14px;
+    border-radius: 4px;
+    display: table-cell;
+    width: 40%;
+    padding: 0;
+    vertical-align: middle;
+    background-color: inherit;
+    outline: none;
+    box-sizing: border-box;
+
+}
+
+.price-input__prefix1 {
+    padding-right: 8px;
+    position: relative;
+    display: table-cell;
+    width: 1px;
+    height: 100%;
+    line-height: 0;
+    color: var(--mycolor5);
+    white-space: nowrap;
+    vertical-align: middle;
+    margin-top: 30px;
+}
