@@ -1,3 +1,12 @@
+:root {
+  --mycolor1: #6DB1FF;
+  --mycolor2: #F16165;
+  --mycolor3: #FFBA05;
+  --mycolor4: #b0d05d;
+  --mycolor5: #9248db;
+  --mycolor6: #00C86F;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -342,6 +351,9 @@ min-height: 100vh;
   color: #ffffffd4;
  }
 
+.footer-sec {
+  background-color: var(--mycolor5);
+}
 
  .footer-item a {
   text-decoration: none;
