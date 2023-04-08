@@ -35,5 +35,10 @@
     background-color: var(--mycolor5);
     border: 1pc solid var(--mycolor5);
     border-radius: 9px;
-    line-height: ;
+  
+}
+
+.container {
+    margin: 0;
+    padding: 0;
 }
