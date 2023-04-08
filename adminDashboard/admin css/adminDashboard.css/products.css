@@ -1,13 +1,10 @@
-.card-category {
-    width: 20rem;
-    background-color: #cbcece;
-    padding: 30px 15px 15px 15px;
-    background-color: white;
-    box-shadow: 0 0 5px 0 grey;
-    margin: 100px auto 0 auto;
-    position: relative;
-    left: 40px;
-
+:root {
+    --mycolor1: #6DB1FF;
+    --mycolor2: #F16165;
+    --mycolor3: #FFBA05;
+    --mycolor4: #b0d05d;
+    --mycolor5: #9248db;
+    --mycolor6: #00C86F;
 }
 
 .hover-effect>*:hover {
@@ -20,4 +17,23 @@
     top: 10px;
     left: 16px;
     font-weight: bold x;
+}
+.card{
+    margin-left: 250px;
+    padding-top: 10px;
+    align-content: center;
+    text-align: center;
+    border: 5px;
+    gap: 10px;
+    box-shadow: -3px -1px 24px -5px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: -3px -1px 24px -5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -3px -1px 24px -5px rgba(0, 0, 0, 0.75);
+    transition: 0.5s;
+}  
+
+.edit-btn {
+    background-color: var(--mycolor5);
+    border: 1pc solid var(--mycolor5);
+    border-radius: 9px;
+    line-height: ;
 }
