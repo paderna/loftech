@@ -18,9 +18,9 @@
     <script src="https://kit.fontawesome.com/3733990f22.js" crossorigin="anonymous"></script>
     <!-- Js CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css%22%3E">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 <style>
+
 
 .cart{
     display: flex;
@@ -49,16 +49,15 @@
     margin-bottom: 30px;
 
 }
-/* #root{
+#root{
     width: 60%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 
 }
-*/
 .sidebar{
-    width: 100%;
+    width: 40%;
     border-radius: 5px;
     background-color: rgb(211, 210, 210);
     margin-left: 20px;
@@ -188,17 +187,49 @@ button:hover{
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="product.html">Product</a>
-                    </li>                
-                    <li class="nav-item">
-                        <a class="nav-link" href="bundles.html">Bundles</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Products
+                        </a>
+              
+                        <ul class="dropdown-menu">
+                            <li class="dropstart dropdown-menu-start">
+                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#productcomponents">Components</a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#productchasis" class="dropdown-item">Chasis Fan</a></li>
+                                    <li><a href="#productcpu" class="dropdown-item">CPU Cooling</a></li>
+                                    <li><a href="#productgraphic" class="dropdown-item">Graphic Cards</a></li>
+                                    <li><a href="#productmemory" class="dropdown-item">Memory</a></li>
+                                    <li><a href="#productmother" class="dropdown-item">Motherboards</a></li>
+                                    <li><a href="#productpc" class="dropdown-item">PC case</a></li>
+                                    <li><a href="#productpower" class="dropdown-item">Power Supply</a></li>
+                                    <li><a href="#productamd" class="dropdown-item">AMD Procesors</a></li>
+                                    <li><a href="#productintel" class="dropdown-item">Intel Procesors</a></li>
+                                    <li><a href="#productsolid" class="dropdown-item">Solid State Drives & Hard Drive</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropstart dropdown-menu-start">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Peripherals</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#productkeyboard" class="dropdown-item">Keyboards</a></li>
+                                <li><a href="#productmouse" class="dropdown-item">Mouse</a></li>
+                                <li><a href="#productheadset" class="dropdown-item">Headsets</a></li>
+                                <li><a href="#productspeaker" class="dropdown-item">Speakers</a></li>
+                            </ul>
+                            <li><a class="dropdown-item" href="#productaccessories">Accessories</a></li>
+                            <li><a class="dropdown-item" href="#productos">OS & Softwares</a></li>
+                        </li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="rewards.html">Rewards</a>
+                        <a class="nav-link" href="easy build.html">Easy Build</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="warranty.html">Warranty</a>
+                        <a class="nav-link" href="Help-Center.html">Rewards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Help-Center.html">Warranty</a>
                     </li>
 
                     
@@ -219,7 +250,7 @@ button:hover{
                         <ul class="dropdown-menu">
                             <li class="dropstart">
                             <li><a class="dropdown-item" href="#">MY ACCOUNT &nbsp; &nbsp; &nbsp;</a></li>
-                            <li><a class="dropdown-item" href="LoginForm.html">Login</a></li>
+                            <li><a class="dropdown-item" href="#">Login</a></li>
                         </li>
                         </ul>
                     </li>
@@ -252,7 +283,7 @@ button:hover{
             <div id="cartItem">Your cart is empty</div>
             <div class="foot">
                 <h3>Total</h3>
-                <h2 id="total">P 0.00</h2>
+                <h2 id="total">$ 0.00</h2>
             </div>
         </div>
 
@@ -372,14 +403,37 @@ button:hover{
     </script>
     <!--  Modal Functions end-->
     <!--  Add to cart Starts Here-->
-
-    
     <script>
-        const product = [];
+        const product = [
+            {
+                id: 0,
+                image: 'images/laptop1.jpg',
+                title: 'Inspire 1',
+                price: 100,
+            },
+            {
+                id: 1,
+                image: 'images/laptop2.jpg',
+                title: 'Inspire 2',
+                price: 150,
+            },
+            {
+                id: 2,
+                image: 'images/laptop3.jpg',
+                title: 'Inspire 3',
+                price: 150,
+            },
+            {
+                id: 3,
+                image: 'images/laptop4.jpg',
+                title: 'sonic 1',
+                price: 150,
+            }
+        ];
         const categories = [...new Set(product.map((item)=>
             {return item}))]
             let i=0;
-       /* document.getElementById('root').innerHTML = categories.map((item)=>
+        document.getElementById('root').innerHTML = categories.map((item)=>
         {
             var {image, title, price} = item;
             return(
@@ -389,14 +443,13 @@ button:hover{
                     </div>
                     <div class='bottom'>
                         <p>${title}</p>
-                        <h2>₱ ${price}.00</h2>`+ 
+                        <h2>$ ${price}.00</h2>`+ 
                         "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
                     `</div>
                 </div>`       
             )
         })
         .join('')
-        */
         console.log(categories)
         var cart = JSON.parse(localStorage.getItem("cartItems"))||[];
         console.log(cart)
@@ -407,7 +460,6 @@ button:hover{
             cart.push({...categories[a]});
             localStorage.setItem("cartItems",JSON.stringify(cart))
             displaycart();
-      
         }
         function delElement(a){
             cart.splice(a, 1);
@@ -423,21 +475,21 @@ button:hover{
             document.getElementById("count").innerHTML=cart.length;
             if(cart.length==0){
                 document.getElementById('cartItem').innerHTML = "Your cart is empty";
-                document.getElementById("total").innerHTML = "₱ "+0+".00";
+                document.getElementById("total").innerHTML = "$ "+0+".00";
             }
             else{
                 document.getElementById('cartItem').innerHTML = cart.map((items)=>
                 {
                     var {image, title, price} = items;
                     total=total+price;
-                    document.getElementById("total").innerHTML = "₱ "+total+".00";
+                    document.getElementById("total").innerHTML = "$ "+total+".00";
                     return(
                         `<div class='cart-item'>
                             <div class=row-img'>
                                 <img class='rowimg' src=${image}>
                             </div>
                                 <p style='font-size:12px;'>${title}</p>
-                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>`+
+                                <h2 style='font-size: 15px;'>$ ${price}.00</h2>`+
                                 "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
                     )
                 }).join('');
