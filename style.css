@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root {
   --mycolor1: #6DB1FF;
   --mycolor2: #F16165;
@@ -7,6 +8,8 @@
   --mycolor6: #00C86F;
 }
 
+=======
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
 * {
     padding: 0;
     margin: 0;
@@ -351,9 +354,12 @@ min-height: 100vh;
   color: #ffffffd4;
  }
 
+<<<<<<< HEAD
 .footer-sec {
   background-color: var(--mycolor5);
 }
+=======
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
 
  .footer-item a {
   text-decoration: none;

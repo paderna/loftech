@@ -18,10 +18,17 @@
     <script src="https://kit.fontawesome.com/3733990f22.js" crossorigin="anonymous"></script>
     <!-- Js CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css%22%3E">
+<<<<<<< HEAD
 
 <style>
 
 
+=======
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<style>
+
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
 .cart{
     display: flex;
     background-color: white;
@@ -49,15 +56,25 @@
     margin-bottom: 30px;
 
 }
+<<<<<<< HEAD
 #root{
+=======
+/* #root{
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
     width: 60%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
 
 }
+<<<<<<< HEAD
 .sidebar{
     width: 40%;
+=======
+*/
+.sidebar{
+    width: 100%;
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
     border-radius: 5px;
     background-color: rgb(211, 210, 210);
     margin-left: 20px;
@@ -187,6 +204,7 @@ button:hover{
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
+<<<<<<< HEAD
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
                           data-bs-toggle="dropdown" aria-expanded="false">
@@ -230,6 +248,19 @@ button:hover{
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Help-Center.html">Warranty</a>
+=======
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Product</a>
+                    </li>                
+                    <li class="nav-item">
+                        <a class="nav-link" href="bundles.html">Bundles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rewards.html">Rewards</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="warranty.html">Warranty</a>
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
                     </li>
 
                     
@@ -250,7 +281,11 @@ button:hover{
                         <ul class="dropdown-menu">
                             <li class="dropstart">
                             <li><a class="dropdown-item" href="#">MY ACCOUNT &nbsp; &nbsp; &nbsp;</a></li>
+<<<<<<< HEAD
                             <li><a class="dropdown-item" href="#">Login</a></li>
+=======
+                            <li><a class="dropdown-item" href="LoginForm.html">Login</a></li>
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
                         </li>
                         </ul>
                     </li>
@@ -283,7 +318,11 @@ button:hover{
             <div id="cartItem">Your cart is empty</div>
             <div class="foot">
                 <h3>Total</h3>
+<<<<<<< HEAD
                 <h2 id="total">$ 0.00</h2>
+=======
+                <h2 id="total">P 0.00</h2>
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
             </div>
         </div>
 
@@ -404,6 +443,7 @@ button:hover{
     <!--  Modal Functions end-->
     <!--  Add to cart Starts Here-->
     <script>
+<<<<<<< HEAD
         const product = [
             {
                 id: 0,
@@ -434,6 +474,13 @@ button:hover{
             {return item}))]
             let i=0;
         document.getElementById('root').innerHTML = categories.map((item)=>
+=======
+        const product = [];
+        const categories = [...new Set(product.map((item)=>
+            {return item}))]
+            let i=0;
+       /* document.getElementById('root').innerHTML = categories.map((item)=>
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
         {
             var {image, title, price} = item;
             return(
@@ -443,13 +490,21 @@ button:hover{
                     </div>
                     <div class='bottom'>
                         <p>${title}</p>
+<<<<<<< HEAD
                         <h2>$ ${price}.00</h2>`+ 
+=======
+                        <h2>₱ ${price}.00</h2>`+ 
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
                         "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
                     `</div>
                 </div>`       
             )
         })
         .join('')
+<<<<<<< HEAD
+=======
+        */
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
         console.log(categories)
         var cart = JSON.parse(localStorage.getItem("cartItems"))||[];
         console.log(cart)
@@ -460,6 +515,10 @@ button:hover{
             cart.push({...categories[a]});
             localStorage.setItem("cartItems",JSON.stringify(cart))
             displaycart();
+<<<<<<< HEAD
+=======
+      
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
         }
         function delElement(a){
             cart.splice(a, 1);
@@ -475,21 +534,33 @@ button:hover{
             document.getElementById("count").innerHTML=cart.length;
             if(cart.length==0){
                 document.getElementById('cartItem').innerHTML = "Your cart is empty";
+<<<<<<< HEAD
                 document.getElementById("total").innerHTML = "$ "+0+".00";
+=======
+                document.getElementById("total").innerHTML = "₱ "+0+".00";
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
             }
             else{
                 document.getElementById('cartItem').innerHTML = cart.map((items)=>
                 {
                     var {image, title, price} = items;
                     total=total+price;
+<<<<<<< HEAD
                     document.getElementById("total").innerHTML = "$ "+total+".00";
+=======
+                    document.getElementById("total").innerHTML = "₱ "+total+".00";
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
                     return(
                         `<div class='cart-item'>
                             <div class=row-img'>
                                 <img class='rowimg' src=${image}>
                             </div>
                                 <p style='font-size:12px;'>${title}</p>
+<<<<<<< HEAD
                                 <h2 style='font-size: 15px;'>$ ${price}.00</h2>`+
+=======
+                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>`+
+>>>>>>> cd8e639dcfb2c5f7a6022fe9e26275d76f27c7f4
                                 "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
                     )
                 }).join('');
