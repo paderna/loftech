@@ -191,49 +191,17 @@ button:hover{
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          Products
-                        </a>
-              
-                        <ul class="dropdown-menu">
-                            <li class="dropstart dropdown-menu-start">
-                                    <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#productcomponents">Components</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#productchasis" class="dropdown-item">Chasis Fan</a></li>
-                                    <li><a href="#productcpu" class="dropdown-item">CPU Cooling</a></li>
-                                    <li><a href="#productgraphic" class="dropdown-item">Graphic Cards</a></li>
-                                    <li><a href="#productmemory" class="dropdown-item">Memory</a></li>
-                                    <li><a href="#productmother" class="dropdown-item">Motherboards</a></li>
-                                    <li><a href="#productpc" class="dropdown-item">PC case</a></li>
-                                    <li><a href="#productpower" class="dropdown-item">Power Supply</a></li>
-                                    <li><a href="#productamd" class="dropdown-item">AMD Procesors</a></li>
-                                    <li><a href="#productintel" class="dropdown-item">Intel Procesors</a></li>
-                                    <li><a href="#productsolid" class="dropdown-item">Solid State Drives & Hard Drive</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropstart dropdown-menu-start">
-                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Peripherals</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#productkeyboard" class="dropdown-item">Keyboards</a></li>
-                                <li><a href="#productmouse" class="dropdown-item">Mouse</a></li>
-                                <li><a href="#productheadset" class="dropdown-item">Headsets</a></li>
-                                <li><a href="#productspeaker" class="dropdown-item">Speakers</a></li>
-                            </ul>
-                            <li><a class="dropdown-item" href="#productaccessories">Accessories</a></li>
-                            <li><a class="dropdown-item" href="#productos">OS & Softwares</a></li>
-                        </li>
-                        </ul>
-                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="product.html">Product</a>
+                    </li>                
                     <li class="nav-item">
                         <a class="nav-link" href="bundles.html">Bundles</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Help-Center.html">Rewards</a>
+                        <a class="nav-link" href="rewards.html">Rewards</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Help-Center.html">Warranty</a>
+                        <a class="nav-link" href="warranty.html">Warranty</a>
                     </li>
 
                     
@@ -286,7 +254,7 @@ button:hover{
             <div id="cartItem">Your cart is empty</div>
             <div class="foot">
                 <h3>Total</h3>
-                <h2 id="total">P 0.00</h2>
+                <h2 id="total">₱ 0.00</h2>
             </div>
         </div> -->
 
@@ -450,7 +418,7 @@ button:hover{
                     </div>
                     <div class='bottom'>
                         <p>${title}</p>
-                        <h2>P ${price}.00</h2>`+ 
+                        <h2>₱ ${price}.00</h2>`+ 
                         "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
                     `</div>
                 </div>`       
@@ -494,21 +462,21 @@ button:hover{
             document.getElementById("count").innerHTML=cart.length;
             if(cart.length==0){
                 document.getElementById('cartItem').innerHTML = "Your cart is empty";
-                document.getElementById("total").innerHTML = "P "+0+".00";
+                document.getElementById("total").innerHTML = "₱ "+0+".00";
             }
             else{
                 document.getElementById('cartItem').innerHTML = cart.map((items)=>
                 {
                     var {image, title, price} = items;
                     total=total+price;
-                    document.getElementById("total").innerHTML = "P "+total+".00";
+                    document.getElementById("total").innerHTML = "₱ "+total+".00";
                     return(
                         `<div class='cart-item'>
                             <div class=row-img'>
                                 <img class='rowimg' src=${image}>
                             </div>
                                 <p style='font-size:12px;'>${title}</p>
-                                <h2 style='font-size: 15px;'>P ${price}.00</h2>`+
+                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>`+
                                 "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
                     )
                 }).join('');
