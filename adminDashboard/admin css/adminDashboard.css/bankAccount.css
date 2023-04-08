@@ -40,7 +40,6 @@
     position: absolute;
     left: 125px;
     border: dashed var(--mycolor5);
-
     display: inline-block;
     border-radius: 10px;
 }
