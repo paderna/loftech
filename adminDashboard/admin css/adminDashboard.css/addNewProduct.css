@@ -1,4 +1,5 @@
 .upload-container {
+<<<<<<< HEAD
    margin: 0;
    padding: 0;
    height: 150vh;
@@ -34,6 +35,8 @@
     border-radius: 10px;
     
 
+=======
+>>>>>>> 985cce804325d4afb7a463b3b9ad6c302ee7e919
     width: 80%;
     height: 250px;
     padding: 25px;
@@ -53,10 +56,10 @@
     
 
 }
-
 .card {
     height: 100%;
     width: 70%;
+<<<<<<< HEAD
     /* margin: 0px auto; */
     /* margin-top: 10px !important; */
     margin-left: 300px !important;
@@ -146,3 +149,10 @@
     margin-left: 160px;
     margin-top: 50px;
 }
+=======
+    margin: 250px auto;
+   
+    position: relative;
+    margin-left: 300px !important;
+}
+>>>>>>> 985cce804325d4afb7a463b3b9ad6c302ee7e919
