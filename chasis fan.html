@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Chasis Fan</title>
+    <title>Chasis Fan & Aio</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -23,153 +23,166 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css%22%3E">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-<style>
+    <style>
+        .cart {
+            display: flex;
+            background-color: white;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 10px;
+            border-radius: 3px;
+            width: 80px;
+        }
 
+        .cart p {
+            height: 22px;
+            width: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 22px;
+            background-color: green;
+            color: white;
+            margin-top: 15px;
+        }
 
-.cart{
-    display: flex;
-    background-color: white;
-    justify-content: space-between;
-    align-items: center;
-    padding: 7px 10px;
-    border-radius: 3px;
-    width: 80px;
-}
+        .container {
+            display: flex;
+            width: 70%;
+            margin-bottom: 30px;
 
-.cart p{
-    height: 22px;
-    width: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 22px;
-    background-color: green;
-    color: white;
-    margin-top: 15px;
-}
-.container{
-    display: flex;
-    width: 70%;
-    margin-bottom: 30px;
+        }
 
-}
-#root{
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+        #root {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
 
-}
-.sidebar{
-    width: 40%;
-    border-radius: 5px;
-    background-color: rgb(211, 210, 210);
-    margin-left: 20px;
-    padding: 15px;
-    text-align: center;
-    
-}
-.head{
-    background-color: green;
-    border-radius: 3px;
-    height: 40px;
-    padding: 10px;
-    margin-bottom: 20px;
-    color: white;
-    display: flex;
-    align-items: center;
+        }
 
-}
-.foot{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0px;
-    padding: 10px 0px;
-    border-top: 1px solid black;
-}
-.box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid green;
-    border-radius: 5px;
-    padding: 15px;
-}
-.img-box{
-    width: 100%;
-    height: 180px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.images{
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: cover;
-    object-position: center;
-}
-.bottom{
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    height: 110px;
-}
-h2{
-    font-size: 20px;
-    color: red;
-}
-button{
-    width: 100%;
-    position: relative;
-    border: none;
-    border-radius: 5px;
-    background-color: green;
-    padding: 7px 25px;
-    cursor: pointer;
-    color: white;
-}
-button:hover{
-    background-color: black;
-}
-.cart-item{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: white;
-    border-bottom: 1px solid black;
-    border-radius: 3px;
-    margin: 10px 10px;
-}
-.row-img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    border: 1px solid green;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.rowimg{
-    max-width: 43px;
-    max-height: 43px;
-    border-radius: 50%;
-}
-.fa-trash:hover{
-    cursor: pointer;
-    color: black;
-}
+        .sidebar {
+            width: 40%;
+            border-radius: 5px;
+            background-color: rgb(211, 210, 210);
+            margin-left: 20px;
+            padding: 15px;
+            text-align: center;
 
-#count{
-    color: white;
-}
+        }
 
-</style>
+        .head {
+            background-color: green;
+            border-radius: 3px;
+            height: 40px;
+            padding: 10px;
+            margin-bottom: 20px;
+            color: white;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0px;
+            padding: 10px 0px;
+            border-top: 1px solid black;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid green;
+            border-radius: 5px;
+            padding: 15px;
+        }
+
+        .img-box {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .images {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .bottom {
+            margin-top: 20px;
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 110px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: red;
+        }
+
+        button {
+            width: 100%;
+            position: relative;
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            padding: 7px 25px;
+            cursor: pointer;
+            color: white;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: white;
+            border-bottom: 1px solid black;
+            border-radius: 3px;
+            margin: 10px 10px;
+        }
+
+        .row-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            border: 1px solid green;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rowimg {
+            max-width: 43px;
+            max-height: 43px;
+            border-radius: 50%;
+        }
+
+        .fa-trash:hover {
+            cursor: pointer;
+            color: black;
+        }
+
+        #count {
+            color: white;
+        }
+    </style>
 
 
 
@@ -194,7 +207,7 @@ button:hover{
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="product.html">Product</a>
-                    </li>                
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="bundles.html">Bundles</a>
                     </li>
@@ -205,7 +218,7 @@ button:hover{
                         <a class="nav-link" href="warranty.html">Warranty</a>
                     </li>
 
-                    
+
 
 
                 </ul>
@@ -217,18 +230,18 @@ button:hover{
 
                     <li class="nav-item dropdown-center" style="margin-top: -22px;">
                         <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          <i class="bi bi-person-circle"></i>
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-person-circle"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li class="dropstart">
                             <li><a class="dropdown-item" href="#">MY ACCOUNT &nbsp; &nbsp; &nbsp;</a></li>
                             <li><a class="dropdown-item" href="LoginForm.html">Login</a></li>
-                        </li>
-                        </ul>
+                    </li>
+                    </ul>
                     </li>
 
-                      
+
 
                 </form>
             </div>
@@ -258,66 +271,70 @@ button:hover{
                     
                         <ul class="">
                             <p>
-                                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#components" aria-expanded="false" aria-controls="collapseExample">
-                                    Components
-                                </button>
-                            </p>
-                            <div class="collapse" id="components">
-                                <div class="card card-body">
-                                    <li><a href="chasis fan.html" class="dropdown-item">Chasis Fan</a></li>
-                                    <li><a href="cpu.html" class="dropdown-item">CPU Cooling</a></li>
-                                    <li><a href="graphic.html" class="dropdown-item">Graphic Cards</a></li>
-                                    <li><a href="memory.html" class="dropdown-item">Memory</a></li>
-                                    <li><a href="motherboards.html" class="dropdown-item">Motherboards</a></li>
-                                    <li><a href="pccase.html" class="dropdown-item">PC case</a></li>
-                                    <li><a href="power.html" class="dropdown-item">Power Supply</a></li>
-                                    <li><a href="amd.html" class="dropdown-item">AMD Procesors</a></li>
-                                    <li><a href="intel.html" class="dropdown-item">Intel Procesors</a></li>
-                                    <li><a href="solid.html" class="dropdown-item">Solid State Drives & Hard Drive</a></li>
-                                </div>
-                            </div>
-                            <p>
-                                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#peripherals" aria-expanded="false" aria-controls="collapseExample">
-                                    Peripherals
-                                </button>
-                            </p>
-                            <div class="collapse" id="peripherals">
-                                <div class="card card-body">
-                                    <li><a href="keyboard.html" class="dropdown-item">Keyboards</a></li>
-                                    <li><a href="mouse.html" class="dropdown-item">Mouse</a></li>
-                                    <li><a href="headset.htmlt" class="dropdown-item">Headsets</a></li>
-                                    <li><a href="speakers.html" class="dropdown-item">Speakers</a></li>
-                                </div>
-                            </div>
-                            <p>
-                                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#accessories" aria-expanded="false" aria-controls="collapseExample">
-                                    Accessories
-                                </button>
-                            </p>
-                            <div class="collapse" id="accessories">
-                                <div class="card card-body">
-                                    <li><a href="accessories.html" class="dropdown-item">Accessories</a></li>
-                            </div>
-                            </div> 
-                            <p>
-                                <button class="btn btn-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#os&softwares" aria-expanded="false" aria-controls="collapseExample">
-                                    OS & Softwares
-                                </button>
-                            </p>
-                            <div class="collapse" id="os&softwares">
-                                <div class="card card-body">
-                                    <li><a href="os.html" class="dropdown-item">OS</a></li>
-                                    <li><a href="softwares.html" class="dropdown-item">Softwares</a></li>
-                                </div>
-                            </div>                        
-                        </li>
-                        </ul>
-                    
+                                <button class=" btn btn-secondary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#components" aria-expanded="false" aria-controls="collapseExample">
+                    Components
+                    </button>
+                    </p>
+                    <div class="collapse" id="components">
+                        <div class="card card-body">
+                            <li><a href="chasis fan.html" class="dropdown-item">Chasis Fan</a></li>
+                            <li><a href="cpu.html" class="dropdown-item">CPU Cooling</a></li>
+                            <li><a href="graphic.html" class="dropdown-item">Graphic Cards</a></li>
+                            <li><a href="memory.html" class="dropdown-item">Memory</a></li>
+                            <li><a href="motherboards.html" class="dropdown-item">Motherboards</a></li>
+                            <li><a href="pccase.html" class="dropdown-item">PC case</a></li>
+                            <li><a href="power.html" class="dropdown-item">Power Supply</a></li>
+                            <li><a href="amd.html" class="dropdown-item">AMD Procesors</a></li>
+                            <li><a href="intel.html" class="dropdown-item">Intel Procesors</a></li>
+                            <li><a href="solid.html" class="dropdown-item">Solid State Drives & Hard Drive</a></li>
+                        </div>
+                    </div>
+                    <p>
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#peripherals" aria-expanded="false" aria-controls="collapseExample">
+                            Peripherals
+                        </button>
+                    </p>
+                    <div class="collapse" id="peripherals">
+                        <div class="card card-body">
+                            <li><a href="keyboard.html" class="dropdown-item">Keyboards</a></li>
+                            <li><a href="mouse.html" class="dropdown-item">Mouse</a></li>
+                            <li><a href="headset.htmlt" class="dropdown-item">Headsets</a></li>
+                            <li><a href="speakers.html" class="dropdown-item">Speakers</a></li>
+                        </div>
+                    </div>
+                    <p>
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#accessories" aria-expanded="false" aria-controls="collapseExample">
+                            Accessories
+                        </button>
+                    </p>
+                    <div class="collapse" id="accessories">
+                        <div class="card card-body">
+                            <li><a href="accessories.html" class="dropdown-item">Accessories</a></li>
+                        </div>
+                    </div>
+                    <p>
+                        <button class="btn btn-secondary" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#os&softwares" aria-expanded="false" aria-controls="collapseExample">
+                            OS & Softwares
+                        </button>
+                    </p>
+                    <div class="collapse" id="os&softwares">
+                        <div class="card card-body">
+                            <li><a href="os.html" class="dropdown-item">OS</a></li>
+                            <li><a href="softwares.html" class="dropdown-item">Softwares</a></li>
+                        </div>
+                    </div>
+                    </li>
+                    </ul>
+
                 </div>
                 <!--Sidebar end-->
-                    <div class="col-md-8" style="padding-top: 20px;">
+                <div class="col-md-8" style="padding-top: 20px;">
                     <div id="root"></div>
-                <!-- <div class="sidebar">
+                    <!-- <div class="sidebar">
                     <div class="head"><p>My cart</p>
                     </div>
                     <div id="cartItem">Your cart is empty
@@ -328,27 +345,27 @@ button:hover{
                     </div>
                 </div> -->
                 </div>
-                
+
             </div>
         </div>
 
     </section>
 
-<!--  End of Components Product section  -->
+    <!--  End of Components Product section  -->
 
 
     <!-- Modal Starts Here -->
     <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-            <!--<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>-->
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!--<h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>-->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="./images/KLT-modified.png" class="modal-img" alt="modal img">
+                </div>
             </div>
-            <div class="modal-body">
-                <img src="./images/KLT-modified.png" class="modal-img" alt="modal img">
-            </div>
-        </div>
         </div>
     </div>
     <!-- Modal Ends Here -->
@@ -432,71 +449,107 @@ button:hover{
     </script>
     <!--  Modal Functions -->
     <script>
-        document.addEventListener("click",function (e){
-        if(e.target.classList.contains("img-fluid")){
-            const src=e.target.getAttribute("src");
-            document.querySelector(".modal-img").src = src;
-            const myModal = new bootstrap.Modal(document.getElementById('gallery-modal'))
-            myModal.show();
-        }
-    })
+        document.addEventListener("click", function (e) {
+            if (e.target.classList.contains("img-fluid")) {
+                const src = e.target.getAttribute("src");
+                document.querySelector(".modal-img").src = src;
+                const myModal = new bootstrap.Modal(document.getElementById('gallery-modal'))
+                myModal.show();
+            }
+        })
     </script>
     <!--  Modal Functions end-->
     <!--  Add to cart Starts Here-->
     <script>
-  
+
 
         const product = [
             {
                 id: 0,
-                image: 'images/fan1.jpg',
-                title: 'Title',
-                price: 100,
+                image: 'https://c1.neweggimages.com/ProductImageCompressAll1280/ARD6S21101878AC7.jpg',
+                title: 'Cooler Master Blizzard T620 CPU Radiator AMD AM4 ',
+                price: 9.967,
             },
             {
                 id: 1,
-                image: 'images/fan2.jpg',
-                title: 'Title',
-                price: 150,
+                image: 'https://c1.neweggimages.com/ProductImageCompressAll1280/35-101-086-01.jpg',
+                title: 'ASUS ROG RYUJIN II 240 ARGB All-in-one Liquid CPU Cooler',
+                price: 15.098,
             },
             {
                 id: 2,
-                image: 'images/fan3.jpg',
-                title: 'Title',
-                price: 200,
+                image: 'https://c1.neweggimages.com/ProductImageCompressAll1280/35-146-069-V02.jpg',
+                title: 'NZXT Kraken Z Series Z63 280mm - RL-KRZ63-01 - AIO RGB ',
+                price:16.598,
             },
             {
                 id: 3,
-                image: 'images/fan4.jpg',
-                title: 'Title',
-                price: 250,
-            }
+                image: 'https://c1.neweggimages.com/ProductImageCompressAll1280/35-181-330-01.png',
+                title: 'CORSAIR iCUE H100i ELITE CAPELLIX XT Liquid CPU Cooler',
+                price: 11.265,
+            },
+            {
+                id: 4,
+                image: 'https://c1.neweggimages.com/ProductImageCompressAll1280/35-103-297-V01.jpg',
+                title: 'CoolerMaster MasterLiquid ML240L RGB V2, Close-Loop AIO',
+                price: 5.279,
+            },
+            {
+                id: 5,
+                image: 'https://c1.neweggimages.com/ProductImageCompressAll1280/35-856-249-01.jpg',
+                title: 'DeepCool LT520 WH Premium Liquid CPU Cooler, 240mm',
+                price: 6.914,
+            },
+            {
+                id: 6,
+                image: 'https://c1.neweggimages.com/ProductImageCompressAll1280/1YF-00K0-00009-01.jpg',
+                title: 'AORUS AIO Liquid Cooler, 360mm Radiator, 120*25mm*3 ARGB Fan',
+                price: 16.662,
+            },
+            {
+                id: 7,
+                image: 'https://c1.neweggimages.com/ProductImageCompressAll1280/A66ZS191215j18bz.jpg',
+                title: 'RAIJINTEK EOS 360 RBW AIO Water CPU Cooler Cooler, with 12025 Addressable RGB',
+                price: 6.703,
+            }, 
+            {
+                id: 8,
+                image: 'https://c1.neweggimages.com/ProductImageCompressAll1280/35-101-069-V01.jpg',
+                title: 'ASUS ROG Strix LC II 280 ARGB all-in-one liquid CPU cooler',
+                price: 11.308,
+            },
+            {
+                id: 9,
+                image: 'https://c1.neweggimages.com/ProductImageCompressAll1280/35-106-593-V01.jpg',
+                title: 'Thermaltake UX100 5V Motherboard Sync High Airflow Hydraulic ',
+                price: 1.208,
+            },
+        
+
         ];
-        const categories = [...new Set(product.map((item)=>
-            {return item}))]
-            let i=0;
-        document.getElementById('root').innerHTML = categories.map((item)=>
-        {
-            var {image, title, price} = item;
-            return(
+        const categories = [...new Set(product.map((item) => { return item }))]
+        let i = 0;
+        document.getElementById('root').innerHTML = categories.map((item) => {
+            var { image, title, price } = item;
+            return (
                 `<div class='box'>
                     <div class='img-box'>
                         <img class='images' src=${image}></img>
                     </div>
                     <div class='bottom'>
                         <p>${title}</p>
-                        <h2>₱ ${price}.00</h2>`+ 
-                        "<button onclick='addtocart("+(i++)+")'>Add to cart</button>"+
-                    `</div>
-                </div>`       
+                        <h2>₱ ${price}.00</h2>` +
+                "<button onclick='addtocart(" + (i++) + ")'>Add to cart</button>" +
+                `</div>
+                </div>`
             )
         })
-        .join('')
+            .join('')
         console.log(categories)
-        var cart = JSON.parse(localStorage.getItem("cartItems"))||[];
+        var cart = JSON.parse(localStorage.getItem("cartItems")) || [];
         console.log(cart)
         displaycart()
-        function addtocart(a){
+        function addtocart(a) {
 
             /* TOASTER NOTIF OF ADDING CART */
             Toastify({
@@ -504,53 +557,52 @@ button:hover{
                 className: "info",
                 position: "center",
                 style: {
-                  background: "green",
+                    background: "green",
                 }
-              }).showToast();
+            }).showToast();
             /* ------------------------ */
-            
+
             console.log(a)
-            cart.push({...categories[a]});
-            localStorage.setItem("cartItems",JSON.stringify(cart))
+            cart.push({ ...categories[a] });
+            localStorage.setItem("cartItems", JSON.stringify(cart))
             displaycart();
-  
+
         }
-        function delElement(a){
+        function delElement(a) {
             cart.splice(a, 1);
-            localStorage.setItem("cartItems",JSON.stringify(cart))
+            localStorage.setItem("cartItems", JSON.stringify(cart))
             displaycart();
 
 
 
         }
 
-        function displaycart(a){
-            let j = 0, total=0;
-            document.getElementById("count").innerHTML=cart.length;
-            if(cart.length==0){
+        function displaycart(a) {
+            let j = 0, total = 0;
+            document.getElementById("count").innerHTML = cart.length;
+            if (cart.length == 0) {
                 document.getElementById('cartItem').innerHTML = "Your cart is empty";
-                document.getElementById("total").innerHTML = "₱ "+0+".00";
+                document.getElementById("total").innerHTML = "₱ " + 0 + ".00";
             }
-            else{
-                document.getElementById('cartItem').innerHTML = cart.map((items)=>
-                {
-                    var {image, title, price} = items;
-                    total=total+price;
-                    document.getElementById("total").innerHTML = "₱ "+total+".00";
-                    return(
+            else {
+                document.getElementById('cartItem').innerHTML = cart.map((items) => {
+                    var { image, title, price } = items;
+                    total = total + price;
+                    document.getElementById("total").innerHTML = "₱ " + total + ".00";
+                    return (
                         `<div class='cart-item'>
                             <div class=row-img'>
                                 <img class='rowimg' src=${image}>
                             </div>
                                 <p style='font-size:12px;'>${title}</p>
-                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>`+
-                                "<i class='fa-solid fa-trash' onclick='delElement("+ (j++) +")'></i></div>"
+                                <h2 style='font-size: 15px;'>₱ ${price}.00</h2>` +
+                        "<i class='fa-solid fa-trash' onclick='delElement(" + (j++) + ")'></i></div>"
                     )
                 }).join('');
             }
         }
 
-    </script>
+    </script> 
 
     <!--  Add to cart Ends Here-->
 
